@@ -1,0 +1,33 @@
+{
+    "name": "happyphper/laravel-best-sign",
+    "description": "BestSign SDK for Laravel",
+    "version": "dev-main",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^6.3|^7.0|^8.0|^9.0|^10.0",
+        "ext-curl": "*",
+        "php": ">=8.0",
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Happyphper\\LaravelBestSign\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Baron",
+            "email": "baronbool92@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Happyphper\\LaravelBestSign\\ServiceProvider"
+            ]
+        }
+    }
+}
