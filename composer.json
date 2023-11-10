@@ -1,7 +1,7 @@
 {
     "name": "happyphper/laravel-best-sign",
     "description": "BestSign SDK for Laravel",
-    "version": "dev-main",
+    "version": "v1.0.0",
     "type": "library",
     "require": {
         "ext-curl": "*",
