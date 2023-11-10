@@ -9,7 +9,8 @@ abstract class Base
 {
     private function bs(): LaravelBestSign
     {
-        return app(LaravelBestSign::class);
+        $instance = app(LaravelBestSign::class);
+        return $instance;
     }
 
     /**

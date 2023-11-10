@@ -5,7 +5,7 @@ namespace Happyphper\LaravelBestSign\Apis;
 /**
  * 合同详情
  */
-class ContractDetail extends Base
+class ContractDetailApi extends Base
 {
     public function __construct(private string $contractId)
     {

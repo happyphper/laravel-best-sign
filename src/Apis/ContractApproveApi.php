@@ -3,11 +3,11 @@
 namespace Happyphper\LaravelBestSign\Apis;
 
 /**
- * 驳回重签
+ * 合同审批
  */
-class ContractRejectResign extends Base
+class ContractApproveApi extends Base
 {
-    public function __construct(private string $contractId, private string $userAccount)
+    public function __construct(private string $contractId, private bool $pass = true)
     {
     }
 
@@ -18,14 +18,14 @@ class ContractRejectResign extends Base
 
     public function path(): string
     {
-        return sprintf('/api/contract/%s/reject-signer-resign', $this->contractId);
+        return '/api/contracts/sendApprovedContract';
     }
 
     public function postData(): array
     {
         return [
+            'result' => $this->pass ? 'True' : 'False',
             'contractId' => $this->contractId,
-            'userAccount' => $this->userAccount,
         ];
     }
 }

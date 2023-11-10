@@ -4,7 +4,6 @@
     "version": "dev-main",
     "type": "library",
     "require": {
-        "illuminate/support": "^6.3|^7.0|^8.0|^9.0|^10.0",
         "ext-curl": "*",
         "php": ">=8.0",
         "ext-json": "*",
@@ -14,6 +13,11 @@
     "autoload": {
         "psr-4": {
             "Happyphper\\LaravelBestSign\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Happyphper\\LaravelBestSign\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -29,5 +33,8 @@
                 "Happyphper\\LaravelBestSign\\ServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.15"
     }
 }

@@ -2,12 +2,14 @@
 
 namespace Happyphper\LaravelBestSign\Apis;
 
+use Happyphper\LaravelBestSign\Enums\LinkPageEnum;
+
 /**
- * 合同审批
+ * 未审批合同预览链接
  */
-class ContractApprove extends Base
+class ContractPreviewLinkApi extends Base
 {
-    public function __construct(private string $contractId, private bool $pass = true)
+    public function __construct(private string $contractId)
     {
     }
 
@@ -24,8 +26,9 @@ class ContractApprove extends Base
     public function postData(): array
     {
         return [
-            'result' => $this->pass ? 'True' : 'False',
+            'devAccountId' => $this->devAccountId(),
             'contractId' => $this->contractId,
+            'targetPage' => LinkPageEnum::NO_PERMISSION_VIEW,
         ];
     }
 }

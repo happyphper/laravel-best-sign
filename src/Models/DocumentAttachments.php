@@ -2,7 +2,7 @@
 
 namespace Happyphper\LaravelBestSign\Models;
 
-class DocumentFields
+class DocumentAttachments
 {
     public function __construct(private string $documentId, private array $fields)
     {
@@ -12,7 +12,9 @@ class DocumentFields
     {
         return [
             'documentId' => $this->documentId,
-            'descriptionFields' => $this->fields,
+            'attachments' => [
+
+            ],
         ];
     }
 }

@@ -11,7 +11,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     protected bool $defer = true;
 
-    public function register()
+    public function register(): void
     {
         $this->app->singleton('LaravelBestSign', function ($app) {
             return new LaravelBestSign($app['config']);
@@ -24,7 +24,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/bestsign.php' => config_path('bestsign.php'),
+            __DIR__ . '/../config/bestsign.php' => $this->app->configPath('bestsign.php'),
         ]);
 
         $this->mergeConfigFrom(__DIR__ . '/../config/logging.php', 'logging.channels.bestsign');

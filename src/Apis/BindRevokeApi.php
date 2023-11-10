@@ -3,9 +3,9 @@
 namespace Happyphper\LaravelBestSign\Apis;
 
 /**
- * 账号绑定
+ * 解除绑定
  */
-class Bind extends Base
+class BindRevokeApi extends Base
 {
     public function method(): string
     {
@@ -14,16 +14,13 @@ class Bind extends Base
 
     public function path(): string
     {
-        return '/api/users/binding-url';
+        return '/api/users/relieve-binding';
     }
 
     public function postData(): array
     {
         return [
             'devAccountId' => $this->devAccountId(),
-            'ssqAccount' => $this->bindAccount(),
-            'userType' => $this->bindAccountType(),
-            'targetPage' => 'home',
         ];
     }
 }

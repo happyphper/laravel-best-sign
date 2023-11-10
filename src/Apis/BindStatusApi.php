@@ -3,14 +3,10 @@
 namespace Happyphper\LaravelBestSign\Apis;
 
 /**
- * 跳转链接
+ * 绑定状态
  */
-class Link extends Base
+class BindStatusApi extends Base
 {
-    public function __construct(private string $contractId)
-    {
-    }
-
     public function method(): string
     {
         return 'POST';
@@ -18,15 +14,13 @@ class Link extends Base
 
     public function path(): string
     {
-        return '/api/users/sso-link';
+        return '/api/users/binding-existence';
     }
 
     public function postData(): array
     {
         return [
             'devAccountId' => $this->devAccountId(),
-            'contractId' => $this->contractId,
-            'targetPage' => 'noPermissionView',
         ];
     }
 }

@@ -1,0 +1,12 @@
+<phpunit>
+    <php>
+        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <env name="BEST_SIGN_ENV" value="dev"/>
+        <env name="BEST_SIGN_CLIENT_ID" value=""/>
+        <env name="BEST_SIGN_CLIENT_SECRET" value=""/>
+        <env name="BEST_SIGN_PRIVATE_KEY" value="key.pem"/>
+        <env name="BEST_SIGN_DEV_ACCOUNT_ID" value=""/>
+        <env name="BEST_SIGN_BIND_ACCOUNT" value=""/>
+        <env name="BEST_SIGN_BIND_ACCOUNT_TYPE" value="1"/>
+    </php>
+</phpunit>

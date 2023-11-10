@@ -5,7 +5,7 @@ namespace Happyphper\LaravelBestSign\Apis;
 /**
  * 模板详情
  */
-class TemplateDetail extends Base
+class TemplateDetailApi extends Base
 {
     /**
      * @param string $id
@@ -22,7 +22,7 @@ class TemplateDetail extends Base
 
     public function path(): string
     {
-        return '/api/templates/v2';
+        return '/api/templates/overview';
     }
 
     public function urlParams(): array

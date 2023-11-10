@@ -137,9 +137,9 @@ class HttpClient
             return $uri;
         }
 
-        $s = http_build_query($urlParams);
+        $s = str_starts_with($uri, '?') ? '' : '?';
 
-        $s .= str_ends_with($uri, '?') ? '' : '?';
+        $s .= http_build_query($urlParams);
 
         return $uri . $s;
     }

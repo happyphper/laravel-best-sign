@@ -2,12 +2,14 @@
 
 namespace Happyphper\LaravelBestSign\Apis;
 
+use Happyphper\LaravelBestSign\Models\ContractListParams;
+
 /**
  * 合同列表
  */
-class ContractList extends Base
+class ContractListApi extends Base
 {
-    public function __construct(private string $contractStatus = '', private string $customContractId = '',)
+    public function __construct(private ContractListParams $params)
     {
     }
 
@@ -23,9 +25,6 @@ class ContractList extends Base
 
     public function postData(): array
     {
-        return [
-            'contractStatus' => $this->contractStatus,
-            'customContractId' => $this->customContractId,
-        ];
+        return $this->params->toArray();
     }
 }
